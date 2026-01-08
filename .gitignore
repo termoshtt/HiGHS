@@ -293,3 +293,9 @@ highs-problem-set
 Options.md
 
 build-latest
+
+# WASM tests
+tests_wasm/node_modules/
+
+# Pyodide build cache
+.pyodide_build/

@@ -17,6 +17,8 @@ set(headers_python ${highs_headers_python}
                    ${basiclu_headers_python})
 
 # Find Python 3
+# PYBIND11_FINDPYTHON is required for cross-compilation (e.g., Emscripten/WASM)
+set(PYBIND11_FINDPYTHON ON)
 find_package(Python COMPONENTS Interpreter Development.Module REQUIRED)
 find_package(pybind11 CONFIG)
 
