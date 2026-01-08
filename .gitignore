@@ -293,3 +293,10 @@ highs-problem-set
 Options.md
 
 build-latest
+
+# WASM tests
+tests_wasm/node_modules/
+tests_wasm/package-lock.json
+
+# Pyodide build cache
+.pyodide_build/
