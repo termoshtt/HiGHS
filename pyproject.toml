@@ -210,3 +210,11 @@ enable = ["cpython-freethreading"]
 test-command = "pytest {project}/tests"
 test-extras = ["test", "numpy"]
 build-verbosity = 1
+
+# Pyodide/WASM build configuration
+[[tool.cibuildwheel.overrides]]
+select = "*-pyodide_*"
+# Disable ZLIB for WASM builds (not available in Emscripten by default)
+config-settings = { "cmake.args" = "-DPYTHON_BUILD_SETUP=ON;-DZLIB=OFF" }
+# Skip tests in WASM environment
+test-command = ""
